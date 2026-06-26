@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>💰 Expense Tracker</h1>
+    <button onclick="toggleDarkMode()" class="dark-btn">
+        🌙 Toggle Dark Mode
+    </button>
+</header>
+
+<div class="container">
+
+    <section class="card">
+
+        <h2>Add Expense</h2>
+
+        <input
+            type="number"
+            id="amount"
+            placeholder="Enter Amount">
+
+        <input
+            type="text"
+            id="category"
+            placeholder="Category">
+
+        <input
+            type="date"
+            id="date">
+
+        <button onclick="addExpense()">
+            Add Expense
+        </button>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Monthly Budget</h2>
+
+        <input
+            type="number"
+            id="budget"
+            placeholder="Enter Monthly Budget">
+
+        <button onclick="setBudget()">
+            Save Budget
+        </button>
+
+        <h3>
+            Remaining Budget:
+            $<span id="remaining">0.00</span>
+        </h3>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Total Expenses</h2>
+
+        <h1>
+            $<span id="total">0.00</span>
+        </h1>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Expense List</h2>
+
+        <ul id="expenseList"></ul>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Spending by Category</h2>
+
+        <ul id="categories"></ul>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Expense Breakdown</h2>
+
+        <canvas id="expenseChart"></canvas>
+
+    </section>
+
+    <section class="card center">
+
+        <button onclick="exportCSV()">
+            📄 Export CSV
+        </button>
+
+    </section>
+
+</div>
+
+<footer>
+    <p>Expense Tracker © 2026</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
