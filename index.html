@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <button onclick="toggleDarkMode()">
+    Toggle Dark Mode
+</button>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <input type="number" id="amount" placeholder="Amount">
+        <input type="text" id="category" placeholder="Category">
+
+        <button onclick="addExpense()">Add Expense</button>
+        <h3>Monthly Budget</h3>
+
+<input
+    type="number"
+    id="budget"
+    placeholder="Enter Budget">
+
+<button onclick="setBudget()">
+    Save Budget
+</button>
+<button onclick="exportCSV()">
+    Export CSV
+</button>
+
+<h3>
+    Remaining Budget:
+    $<span id="remaining">0</span>
+</h3>
+
+        <h2>Total: $<span id="total">0</span></h2>
+
+        <ul id="expenseList"></ul>
+        <h3>Spending By Category</h3>
+
+<ul id="categories"></ul>
+<input type="date" id="date">
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<canvas id="expenseChart"></canvas>
+
+</body>
+</html>
